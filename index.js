@@ -18,14 +18,22 @@ const questions = [
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
         if (err) throw err;
+        console.log(data);
         console.log('The file has been saved!');
     })
+}
+
+const formattedData = (answers) => {
+    let formattedProjectName = `#\n${answers.projectName}`;
+    let formattedProjectRepo = `[Repository](${answers.projectRepo})`;
+    let formattedDataForMD = formattedProjectName + formattedProjectRepo;
+    return formattedDataForMD;
 }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
-    .then(answers => writeToFile('test.md', JSON.stringify(answers)));
+    .then(answers => writeToFile('test.md', formattedData(JSON.stringify(answers))));
     
 }
 
