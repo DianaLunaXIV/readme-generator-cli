@@ -24,6 +24,32 @@ const questions = [
         type: 'input',
         name: 'projectInstallation',
         message: 'Describe how to install your project.',
+    },
+    {
+        type: 'input',
+        name: 'projectUsage',
+        message: 'Describe how to use your project.',
+    },
+    {
+        type: 'input',
+        name: 'projectContribution',
+        message: 'Tell users how they can contribute to your project.',
+    },
+    {
+        type: 'list',
+        name: 'projectLicense',
+        choices: ["GNU AGPLv3", "GNU GPLv3", "MIT", "Apache License 2.0", "Mozilla Public License 2.0"],
+        message: 'Which software license do you want to apply to your project?',
+    },
+    {
+        type: 'input',
+        name: 'projectUsername',
+        message: 'What is your GitHub username?',
+    },
+    {
+        type: 'input',
+        name: 'projectEmail',
+        message: 'What is your e-mail address?',
     }
 ];
 // TODO: Create a function to write README file

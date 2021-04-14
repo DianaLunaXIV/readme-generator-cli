@@ -16,7 +16,10 @@ function generateMarkdown(answers) {
 [Repository](${answers.projectRepo})\n
 ## Description\n > ${answers.projectDescription}\n
 ## Installation\n > ${answers.projectInstallation}\n
-
+## Usage\n > ${answers.projectUsage}\n
+## Contribution\n > ${answers.projectContribution}\n
+## License\n > ${answers.projectLicense}\n
+## Contact Information\n > If you have questions about my project, please reach out to me on [GitHub](github.com/${answers.projectUsername}) or send me an e-mail at ${answers.projectEmail}.
 `;
 }
 
