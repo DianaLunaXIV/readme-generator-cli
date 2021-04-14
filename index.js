@@ -18,7 +18,12 @@ const questions = [
     {
         type: 'input',
         name: 'projectDescription',
-        message: 'Provide a description of your project here.'
+        message: 'Provide a description of your project here.',
+    },
+    {
+        type: 'input',
+        name: 'projectInstallation',
+        message: 'Describe how to install your project.',
     }
 ];
 // TODO: Create a function to write README file

@@ -14,7 +14,8 @@ function renderLicenseSection(license) {}
 function generateMarkdown(answers) {
   return `# ${answers.projectName}\n
 [Repository](${answers.projectRepo})\n
-## Description\n > ${answers.projectDescription}
+## Description\n > ${answers.projectDescription}\n
+## Installation\n > ${answers.projectInstallation}\n
 
 `;
 }
