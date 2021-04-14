@@ -24,16 +24,21 @@ function writeToFile(fileName, data) {
 }
 
 const formattedData = (answers) => {
-    let formattedProjectName = `#\n${answers.projectName}`;
-    let formattedProjectRepo = `[Repository](${answers.projectRepo})`;
+    let formattedProjectName = `# ${answers.projectName}\n`;
+    let formattedProjectRepo = `[Repository](${answers.projectRepo})\n`;
     let formattedDataForMD = formattedProjectName + formattedProjectRepo;
     return formattedDataForMD;
 }
 
 // TODO: Create a function to initialize app
 function init() {
+    let answersResolved;
     inquirer.prompt(questions)
-    .then(answers => writeToFile('test.md', formattedData(JSON.stringify(answers))));
+    .then(answers => {
+        answersResolved = formattedData(answers)
+        writeToFile('test.md', answersResolved)
+    });
+
     
 }
 
