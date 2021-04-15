@@ -65,7 +65,6 @@ function renderTableOfContents(answers) {
   4. [Usage](#usage)\n
   5. [License](#license)\n
   6. [Contact](#contact)\n
-  7. [Badges](#badges)\n  
   `;
   return tableOfContents;
 }
@@ -77,6 +76,7 @@ function generateMarkdown(answers) {
   let licenseSection = renderLicenseSection(answers.projectLicense);
   let toc = renderTableOfContents(answers);
   return `# ${answers.projectName}\n
+![${answers.projectLicense}](${licenseBadge})\n
 [Repository](${answers.projectRepo})\n
 ## Table of Contents\n ${toc}\n
 ## Description\n > ${answers.projectDescription}\n
@@ -86,7 +86,6 @@ function generateMarkdown(answers) {
 ## License\n [${answers.projectLicense}](${licenseLink})\n
 ${licenseSection}\n
 ## Contact\n > If you have questions about my project, please reach out to me on [GitHub](github.com/${answers.projectUsername}) or send me an e-mail at ${answers.projectEmail}.
-## Badges\n ![${answers.projectLicense}](${licenseBadge})\n
 `;
 }
 
