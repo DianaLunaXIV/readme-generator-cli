@@ -1,5 +1,6 @@
 //skip to line 1933 for actual code
 const licenseText = require('./licenseText');
+const _ = require('lodash');
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -57,20 +58,34 @@ function renderLicenseSection(license) {
   }
 }
 
+function renderTableOfContents(answers) {
+  let tableOfContents = ` 1. [${answers.projectName}](#${answers.projectName.toLowerCase()})\n
+  2. [Description](#description)\n
+  3. [Installation](#installation)\n
+  4. [Usage](#usage)\n
+  5. [License](#license)\n
+  6. [Contact](#contact)\n
+  7. [Badges](#badges)\n  
+  `;
+  return tableOfContents;
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   let licenseBadge = renderLicenseBadge(answers.projectLicense);
   let licenseLink = renderLicenseLink(answers.projectLicense);
   let licenseSection = renderLicenseSection(answers.projectLicense);
+  let toc = renderTableOfContents(answers);
   return `# ${answers.projectName}\n
 [Repository](${answers.projectRepo})\n
+## Table of Contents\n ${toc}\n
 ## Description\n > ${answers.projectDescription}\n
 ## Installation\n > ${answers.projectInstallation}\n
 ## Usage\n > ${answers.projectUsage}\n
 ## Contribution\n > ${answers.projectContribution}\n
 ## License\n [${answers.projectLicense}](${licenseLink})\n
 ${licenseSection}\n
-## Contact Information\n > If you have questions about my project, please reach out to me on [GitHub](github.com/${answers.projectUsername}) or send me an e-mail at ${answers.projectEmail}.
+## Contact\n > If you have questions about my project, please reach out to me on [GitHub](github.com/${answers.projectUsername}) or send me an e-mail at ${answers.projectEmail}.
 ## Badges\n ![${answers.projectLicense}](${licenseBadge})\n
 `;
 }
