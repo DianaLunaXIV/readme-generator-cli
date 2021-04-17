@@ -62,8 +62,11 @@ function renderTableOfContents(answers) {
   2. [Description](#description)\n
   3. [Installation](#installation)\n
   4. [Usage](#usage)\n
-  5. [License](#license)\n
-  6. [Contact](#contact)\n
+  5. [Issues](#issues)\n
+  6. [Contribution](#contribution)\n
+  7. [License](#license)\n
+  8. [Credits](#credits)\n
+  9. [Contact](#contact)\n
   `;
   return tableOfContents;
 }
@@ -81,9 +84,11 @@ function generateMarkdown(answers) {
 ## Description\n > ${answers.projectDescription}\n
 ## Installation\n > ${answers.projectInstallation}\n
 ## Usage\n > ${answers.projectUsage}\n
+## Issues\n > ${answers.projectIssues}\n
 ## Contribution\n > ${answers.projectContribution}\n
 ## License\n [${answers.projectLicense}](${licenseLink})\n
 ${licenseSection}\n
+## Credits\n > ${answers.projectCredits}\n
 ## Contact\n > If you have questions about my project, please reach out to me on [GitHub](github.com/${answers.projectUsername}) or send me an e-mail at ${answers.projectEmail}.
 `;
 }

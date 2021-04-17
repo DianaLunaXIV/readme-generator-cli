@@ -31,6 +31,11 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'projectIssues',
+        message: 'Write a section describing any known issues or planned features for your project.'
+    },
+    {
+        type: 'input',
         name: 'projectContribution',
         message: 'Tell users how they can contribute to your project.',
     },
@@ -39,6 +44,11 @@ const questions = [
         name: 'projectLicense',
         choices: ["GNU AGPLv3", "GNU GPLv3", "MIT", "Apache License 2.0", "Mozilla Public License 2.0"],
         message: 'Which software license do you want to apply to your project?',
+    },
+    {
+        type: 'input',
+        name: 'projectCredits',
+        message: 'Write a credits section to give credit to any contributors or projects that made your project possible.'
     },
     {
         type: 'input',
