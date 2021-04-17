@@ -660,14 +660,15 @@ const licenseText = {
     if any, to sign a "copyright disclaimer" for the program, if necessary.
     For more information on this, and how to apply and follow the GNU AGPL, see
     <https://www.gnu.org/licenses/>.`,
-        GPLv3: `                    GNU GENERAL PUBLIC LICENSE
-        Version 3, 29 June 2007
+        GPLv3: `
+                    GNU GENERAL PUBLIC LICENSE
+                    Version 3, 29 June 2007
     
     Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
     Everyone is permitted to copy and distribute verbatim copies
     of this license document, but changing it is not allowed.
     
-            Preamble
+                            Preamble
     
     The GNU General Public License is a free, copyleft license for
     software and other kinds of works.
@@ -730,7 +731,7 @@ const licenseText = {
     The precise terms and conditions for copying, distribution and
     modification follow.
     
-        TERMS AND CONDITIONS
+                        TERMS AND CONDITIONS
     
     0. Definitions.
     
