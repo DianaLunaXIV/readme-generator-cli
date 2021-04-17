@@ -1,6 +1,5 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const _ = require('lodash');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
@@ -60,13 +59,6 @@ function writeToFile(fileName, data) {
         console.log('Your markdown file has been saved to the same directory as the generator. Thank you for using my program!');
     })
 }
-
-//generate section (key, value)
-//key: section name | value: user input
-//return ## capitalized Key \n\n value
-
-//table of contents: loops over answers objects to create strings for capitalized bracket key
-//use _.capitalize
 
 
 // TODO: Create a function to initialize app
