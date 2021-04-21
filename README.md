@@ -29,7 +29,7 @@
  > This is a CLI designed to help developers produce a professionally structured README markdown file for use on project repositories.
 
 ## Installation
- > This project requires Node.JS and NPM to be installed. Please reference Node documentation for detailed instructions on how to install those. To install my program: 1. Clone the repository. 2. Open a terminal and cd to where you cloned the repository. 3.Run `npm i` in your terminal to install Node package dependencies. 4. Run `node index.js` in your terminal.
+ > This project requires Node.JS and NPM to be installed. Please reference Node documentation for detailed instructions on how to install those. To install my program: 1. Clone the repository. 2. Open a terminal and cd to where you cloned the repository. 3.Run npm i in your terminal to install Node package dependencies. 4. Run node index.js in your terminal.
 
 ## Usage
  > Answer the prompts that are displayed in your terminal. Once all the prompts are answered, the program will log what you typed, a message indicating the file is saved, and write README.md to the root directory of the cloned repository (i.e. /readme-generator-cli/README.md).
